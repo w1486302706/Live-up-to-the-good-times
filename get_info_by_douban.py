@@ -8,8 +8,9 @@ import re
 # 请求伪装成浏览器
 hearders = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36'}
 
-n = pd.read_table('Live up to the good times/name.txt')
-names = n['name']
+# n = pd.read_table('name.txt')
+# names = n['name']
+names = ['斗破苍穹','斗罗大陆']
 res = []
 for name in names:
     # url = f'https://www.douban.com/search?cat=1002&q={name}' # 仅影视
