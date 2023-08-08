@@ -1,0 +1,16 @@
+.detail_head {
+    background-color: beige;
+}
+
+tr {
+    height: 20px;
+}
+
+th {
+    width: 200px;
+}
+
+td {
+    text-align: center;
+    background-color: rgba(127, 255, 180, 0.288);
+}

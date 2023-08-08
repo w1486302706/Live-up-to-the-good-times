@@ -1,0 +1,28 @@
+{% extends "noinfo/base.html" %}
+
+{% block title %}详细{% endblock %}
+
+{% block content %}
+    <table>
+        <tr class="detail_head">
+            <th>主题</th>
+            <th>名称</th>
+            <th>集数</th>
+            <th>开始集数</th>
+            <th>结束集数</th>
+            <th>开播日期</th>
+            <th>完播日期</th>
+        </tr>
+        {% for i in text %}
+        <tr class="detail_text">
+            <td>{{ i.theme }}</td>
+            <td>{{ i.name }}</td>
+            <td>{{ i.episodes }}</td>
+            <td>{{ i.episode_start }}</td>
+            <td>{{ i.episode_end }}</td>
+            <td>{{ i.date_start }}</td>
+            <td>{{ i.date_end }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

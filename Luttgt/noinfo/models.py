@@ -4,8 +4,10 @@ from django.db import models
 class NoinfoDetail(models.Model):
     theme = models.CharField(max_length=100, blank=True, null=True)
     name = models.CharField(max_length=100, blank=True, null=True)
+    order = models.IntegerField(blank=True, null=True)
     type = models.CharField(max_length=100, blank=True, null=True)
     form = models.CharField(max_length=100, blank=True, null=True)
+    tag = models.CharField(max_length=100, blank=True, null=True)
     dim = models.CharField(max_length=100, blank=True, null=True)
     episodes = models.IntegerField(blank=True, null=True)
     duration = models.IntegerField(blank=True, null=True)
@@ -19,5 +21,17 @@ class NoinfoDetail(models.Model):
     area = models.CharField(max_length=100, blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'noinfo_detail'
+
+class NoinfoTheme(models.Model):
+    theme = models.CharField(max_length=100, blank=True, null=True)
+    state_view = models.CharField(max_length=100, blank=True, null=True)
+    author = models.CharField(max_length=100, blank=True, null=True)
+    universe = models.CharField(max_length=100, blank=True, null=True)
+    source_type = models.CharField(max_length=100, blank=True, null=True)
+    source_name = models.CharField(max_length=100, blank=True, null=True)
+
+    class Meta:
+        managed = True
+        db_table = 'noinfo_theme'

@@ -1,9 +1,7 @@
-<html>
-    <body>
-        <ul>
-            {% for i in text %}
-                <li>{{ i.name }}</li>
-            {% endfor %}
-        </ul>
-    </body>
-</html>
+{% extends "noinfo/base.html" %}
+
+{% block title %}首页{% endblock %}
+
+{% block content %}
+    <h1>测试</h1>
+{% endblock %}
